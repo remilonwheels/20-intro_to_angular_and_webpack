@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html ng-app="swaggycowApp">
+  <head>
+    <meta charset="utf-8">
+    <title>Da Swaggy Cow</title>
+  </head>
+  <body>
+    <main>
+      <section class="container" ng-controller="SwaggycowController">
+        <h2>{{ swaggycowCtrl.title }}</h2>
+
+        <pre>
+          {{ swaggycowCtrl.speak(swaggycowCtrl.text) }}
+        </pre>
+
+        <input type="text" ng-model="swaggycowCtrl.text">
+        <button ng-click="swaggycowCtrl.logger(swaggycowCtrl.text)">Show Dat</button>
+      </section>
+
+      <section>
+        <h2></h2>
+
+        <p>{{ swaggycowCtrl.bindtext }}</p>
+        <input type="text" ng-model="swaggycowCtrl.bindtext">
+      </section>
+    </main>
+  </body>
+</html>
